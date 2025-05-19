@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+clear
+echo "--------------------------------------------"
+echo "      GESTIÓN BÁSICA DE PROCESOS EN UBUNTU"
+echo "--------------------------------------------"
+echo "1. Ver procesos activos (top simplificado)"
+echo "2. Ver información de un proceso por PID"
+echo "3. Enviar señal SIGTERM a un proceso por PID"
+echo "4. Buscar proceso por nombre"
+echo "0. Volver al menú principal"
+echo "--------------------------------------------"
+read -p "Seleccione una opción: " opcion_proc
+
+case $opcion_proc in
+    # Listado de procesos activos
+    1)
+        echo ""
+        echo "Procesos activos (ordenados por uso de CPU):"
+        ps -eo pid,comm,user,%cpu,%mem --sort=-%cpu | head -n 15
+        ;;
+
+    *)
+        echo "Opción no reconocida. Regresando al menú principal..."
+        ;;
+esac
