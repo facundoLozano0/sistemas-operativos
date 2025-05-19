@@ -31,7 +31,25 @@ case $opcion_proc in
             echo "PID no válido o el proceso no está activo."
         fi
         ;;
+    # Enviar señal SIGTERM a un proceso con confirmación
+    3)
+        read -p "Ingrese el PID del proceso a finalizar: " pid
+        if ps -p "$pid" > /dev/null; then
+            read -p "¿Desea enviar SIGTERM al proceso $pid? (s/n): " confirm
+            if [[ "$confirm" == "s" || "$confirm" == "S" ]]; then
+                kill -15 "$pid"
+                echo "Señal SIGTERM enviada al proceso $pid."
+            else
+                echo "Operación cancelada por el usuario."
+            fi
+        else
+            echo "PID inválido o proceso no encontrado."
+        fi
+        ;;
+        # siguiente
     *)
+    
         echo "Opción no reconocida. Regresando al menú principal..."
         ;;
 esac
+
