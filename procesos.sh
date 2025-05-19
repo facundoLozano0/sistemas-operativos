@@ -20,6 +20,7 @@ case $opcion_proc in
         echo "Procesos activos (ordenados por uso de CPU):"
         ps -eo pid,comm,user,%cpu,%mem --sort=-%cpu | head -n 15
         ;;
+
     # Mostrar detalles de un proceso por PID
     2)
         read -p "Ingrese el PID del proceso: " pid
@@ -31,6 +32,7 @@ case $opcion_proc in
             echo "PID no válido o el proceso no está activo."
         fi
         ;;
+
     # Enviar señal SIGTERM a un proceso con confirmación
     3)
         read -p "Ingrese el PID del proceso a finalizar: " pid
@@ -46,15 +48,16 @@ case $opcion_proc in
             echo "PID inválido o proceso no encontrado."
         fi
         ;;
-      # Buscar procesos por nombre usando pgrep
-    # ================================
+
+    # Buscar procesos por nombre usando pgrep
     4)
         read -p "Ingrese el nombre del proceso a buscar: " nombre_proc
         echo ""
         echo "Procesos que coinciden con '$nombre_proc':"
         pgrep -l "$nombre_proc"
         ;;     
-        # siguiente
+    
+    # siguiente
     *)
     
         echo "Opción no reconocida. Regresando al menú principal..."
