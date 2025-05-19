@@ -46,6 +46,14 @@ case $opcion_proc in
             echo "PID inválido o proceso no encontrado."
         fi
         ;;
+      # Buscar procesos por nombre usando pgrep
+    # ================================
+    4)
+        read -p "Ingrese el nombre del proceso a buscar: " nombre_proc
+        echo ""
+        echo "Procesos que coinciden con '$nombre_proc':"
+        pgrep -l "$nombre_proc"
+        ;;     
         # siguiente
     *)
     
