@@ -20,7 +20,17 @@ case $opcion_proc in
         echo "Procesos activos (ordenados por uso de CPU):"
         ps -eo pid,comm,user,%cpu,%mem --sort=-%cpu | head -n 15
         ;;
-
+    # Mostrar detalles de un proceso por PID
+    2)
+        read -p "Ingrese el PID del proceso: " pid
+        if ps -p "$pid" > /dev/null; then
+            echo ""
+            echo "Información del proceso con PID $pid:"
+            ps -p "$pid" -o pid,ppid,user,comm,%cpu,%mem,etime
+        else
+            echo "PID no válido o el proceso no está activo."
+        fi
+        ;;
     *)
         echo "Opción no reconocida. Regresando al menú principal..."
         ;;
