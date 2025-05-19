@@ -15,7 +15,7 @@ read -p "Seleccione una opción: " opcion_proc
 
 case $opcion_proc in
     # Listado de procesos activos
-    1)
+    #1)
         echo ""
         echo "Procesos activos (ordenados por uso de CPU):"
         ps -eo pid,comm,user,%cpu,%mem --sort=-%cpu | head -n 15
