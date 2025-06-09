@@ -4,12 +4,25 @@ while true; do
     echo "  TOOLKIT DE ADMINISTRACIÓN JR - UBUNTU"
     echo "============================================"
     echo "1. Gestión de procesos"
+    echo "2. Ver uso de Memoria"
+    echo "3. Ver información del Disco"
     echo "0. Salir"
     echo "--------------------------------------------"
     read -p "Seleccione una opción: " opcion
 
     case $opcion in
+
         1)
+            bash memoria.sh
+            read -p "Presione Enter para continuar..."
+            ;;
+
+        2)
+            bash disco.sh
+            read -p "Presione Enter para continuar..."
+            ;;
+
+        3)
             bash procesos.sh
             read -p "Presione Enter para continuar..."
             ;;
