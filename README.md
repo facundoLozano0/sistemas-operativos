@@ -1,12 +1,12 @@
-# 🛠 Toolkit de Administración Jr. - Ubuntu
+#  Toolkit de Administración Jr. - Ubuntu
 
-## Descripción
+# Descripción
 
 Este proyecto forma parte de la Evidencia N°2 del módulo **Sistemas Operativos**. Se trata de un toolkit en **Bash** para la administración básica de sistemas Linux, desarrollado y probado en **Ubuntu**.
 
 ---
 
-## ✅ Funcionalidades Implementadas
+#  Funcionalidades Implementadas
 
 ### Módulo de Procesos (`procesos.sh`)
 - **Opción 1:** Listado de procesos activos ordenados por uso de CPU.
@@ -14,11 +14,15 @@ Este proyecto forma parte de la Evidencia N°2 del módulo **Sistemas Operativos
 - **Opción 3:** Enviar señal `SIGTERM` a un proceso con confirmación previa.
 - **Opción 4:** Buscar procesos por nombre utilizando `pgrep`.
 
+#  Módulo de Memoria (`memoria.sh`)
+1. Ver uso de memoria RAM y Swap con `free -h`.
+2. Mostrar procesos que más memoria consumen.
+3. (Opcional) Diagnóstico completo de memoria (con `vmstat` y `/proc/meminfo`).
 ---
 
-## 🚀 Cómo Ejecutar
+#  Cómo Ejecutar
 
-### 1. Dar permisos de ejecución:
+# 1. Dar permisos de ejecución:
 ```bash
 chmod +x main_toolkit.sh procesos.sh
 ./main_toolkit.sh
