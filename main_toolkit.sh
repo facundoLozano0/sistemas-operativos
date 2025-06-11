@@ -13,17 +13,17 @@ while true; do
     case $opcion in
 
         1)
-            bash memoria.sh
+            bash procesos.sh
             read -p "Presione Enter para continuar..."
             ;;
 
         2)
-            bash disco.sh
+            bash memoria.sh
             read -p "Presione Enter para continuar..."
             ;;
 
         3)
-            bash procesos.sh
+            bash disco.sh
             read -p "Presione Enter para continuar..."
             ;;
         0)
