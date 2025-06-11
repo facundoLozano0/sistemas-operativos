@@ -41,6 +41,6 @@ Este proyecto forma parte de la Evidencia N°2 del módulo **Sistemas Operativos
 
 1. Dar permisos de ejecución:
 ```bash
-chmod +x main_toolkit.sh procesos.sh memoria.sh disco.sh
+chmod +x main_toolkit.sh procesos.sh memoria.sh disco.sh usuarios_grupos.sh seguridad.sh
 ./main_toolkit.sh
 
