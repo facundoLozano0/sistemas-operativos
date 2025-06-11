@@ -23,7 +23,18 @@ Este proyecto forma parte de la Evidencia N°2 del módulo **Sistemas Operativos
 - Ver espacio usado en sistemas de archivos montados (`df -h`).
 - Analizar el tamaño ocupado por un directorio o archivo (`du -sh <ruta>`).
 - Listar archivos de un directorio con sus permisos (`ls -l <directorio>`).
+- 
+### Módulo de Usuarios y Grupos (`usuarios_grupos.sh`)
+- Crear y eliminar usuarios.
+- Agregar usuarios a grupos.
+- Listar usuarios del sistema (`/etc/passwd`).
+- Listar grupos del sistema (`/etc/group`).
 
+### Módulo de Seguridad (`seguridad.sh`)
+- Ver usuarios conectados (`who`).
+- Ver permisos de archivos.
+- Consultar `/etc/passwd`.
+- Ver historial de accesos (`last`).
 ---
 
 ## Cómo Ejecutar
