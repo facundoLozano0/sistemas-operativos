@@ -6,6 +6,8 @@ while true; do
     echo "1. Gestión de procesos"
     echo "2. Ver uso de Memoria"
     echo "3. Ver información del Disco"
+    echo "4. Gestión de Usuarios"
+    echo "5. Seguridad del Sistema"
     echo "0. Salir"
     echo "--------------------------------------------"
     read -p "Seleccione una opción: " opcion
@@ -24,6 +26,16 @@ while true; do
 
         3)
             bash disco.sh
+            read -p "Presione Enter para continuar..."
+            ;;
+
+        4)
+            bash usuarios_grupos.sh
+            read -p "Presione Enter para continuar..."
+            ;;
+
+        5)
+            bash seguridad.sh
             read -p "Presione Enter para continuar..."
             ;;
         0)
